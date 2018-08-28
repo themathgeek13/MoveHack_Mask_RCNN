@@ -99,7 +99,7 @@ weights_path = "/home/rohan/AutoNUE/Mask_RCNN/mask_rcnn_balloon_0050.h5"
 print("Loading weights ", weights_path)
 model.load_weights(weights_path, by_name=True)
 model.save("mask_rcnn_model.h5")
-"""
+
 #filename = "/home/rohan/val_instance/pred/test/119/903127_leftImg8bit.png"
 for filename in glob.iglob("/home/rohan/83df760fdc8bbc2c6a60cf1e8353a5f4_instance/pred/test/"+"**/*/*", recursive=True):
 	print(filename)
@@ -115,7 +115,7 @@ for filename in glob.iglob("/home/rohan/83df760fdc8bbc2c6a60cf1e8353a5f4_instanc
 	visualize.display_instances(img, r['rois'], r['masks'], r['class_ids'], 
                             dataset.class_names, r['scores'], ax=ax,
                             title="Predictions")
-	h,w,c = r['masks'].shape		################
+	h,w,c = r['masks'].shape
 	netstr = []
 	for ind in range(c):
 		maskfilename = filename.split('.')[0]+"_"+str(ind)+".png"
@@ -125,8 +125,8 @@ for filename in glob.iglob("/home/rohan/83df760fdc8bbc2c6a60cf1e8353a5f4_instanc
 		cv2.imwrite(maskfilename,mask*255)
 		netstr.append(maskfilename.split('/')[-1]+" "+str(r["class_ids"][ind]+5)+" "+str(r["scores"][ind]))
 	f.write('\n'.join(netstr))
-	f.close()				################
-	#os.remove(filename)
+	f.close()
+	os.remove(filename)
 
 #img = cv2.imread(filename)
 
@@ -137,4 +137,4 @@ for filename in glob.iglob("/home/rohan/83df760fdc8bbc2c6a60cf1e8353a5f4_instanc
 #                            dataset.class_names, r['scores'])
 
 #print(r['masks'].shape)
-"""
+
