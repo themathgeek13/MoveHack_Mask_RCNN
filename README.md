@@ -10,6 +10,20 @@ Command for running training is: ```python3 train.py --dataset=/path/to/anue/ --
 
 Command for evaluation by generating masks as per the AutoNUE evaluation requirements for instance segmentation is: ```python3 evaluation.py```.
 
+Sample outputs from this codebase are below.
+
+![](assets/segmentation1.jpeg)
+
+![](assets/segmentation2.jpeg)
+
+![](assets/segmentation3.jpeg)
+
+![](assets/segmentation4.jpeg)
+
+![](assets/segmentation5.jpeg)
+
+![](assets/segmentation6.jpeg)
+
 This code is borrowed from the [matterport Mask_RCNN repository](https://github.com/matterport/Mask_RCNN) and the README from that is below.
 
 ## Mask R-CNN for Object Detection and Segmentation
