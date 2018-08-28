@@ -1,4 +1,16 @@
-# Mask R-CNN for Object Detection and Segmentation
+# Repository for object detection and segmentation on Indian Roads Dataset
+
+Scene Understanding Challenge for Autonomous Navigation in Unstructured Environments: [AutoNUE](http://cvit.iiit.ac.in/scene-understanding-challenge-2018/overview.php)
+
+Code for training is in the samples/india folder.
+
+Command for running training is: ```python3 train.py --dataset=/path/to/anue/ --weights=/path/to/mask_rcnn_india.h5```
+
+Command for evaluation by generating masks as per the AutoNUE evaluation requirements for instance segmentation is: ```python3 evaluation.py```.
+
+This code is borrowed from the [matterport Mask_RCNN repository](https://github.com/matterport/Mask_RCNN) and the README from that is below.
+
+## Mask R-CNN for Object Detection and Segmentation
 
 This is an implementation of [Mask R-CNN](https://arxiv.org/abs/1703.06870) on Python 3, Keras, and TensorFlow. The model generates bounding boxes and segmentation masks for each instance of an object in the image. It's based on Feature Pyramid Network (FPN) and a ResNet101 backbone.
 
