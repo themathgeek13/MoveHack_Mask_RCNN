@@ -6,6 +6,8 @@ Code for training is in the samples/india folder.
 
 Command for running training is: ```python3 train.py --dataset=/path/to/anue/ --weights=/path/to/mask_rcnn_india.h5```
 
+[Google Drive Link to pretrained model](https://drive.google.com/file/d/1kHcg-7FPkK-LrnL96SOKWVH9KX50CSv3/view?usp=sharing)
+
 Command for evaluation by generating masks as per the AutoNUE evaluation requirements for instance segmentation is: ```python3 evaluation.py```.
 
 This code is borrowed from the [matterport Mask_RCNN repository](https://github.com/matterport/Mask_RCNN) and the README from that is below.
